@@ -6,7 +6,8 @@ var rollbutton = document.getElementById("rollbutton"),
              min = Math.ceil(min);
              max = Math.floor(max);
             return Math.floor(Math.random() * (max - min + 1)) + min;  
-    
+    }
+
     rollbutton.addEventListener("click",function(){
-        dicearea.innerText +=getRandomInt (1,6) + "\n";
+        dicearea.innerText +=getRandomIntInclusive (1,6) + "\n"
     });
