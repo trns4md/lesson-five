@@ -4,15 +4,15 @@ var checkamount = document.getElementById("check-amount"),
     totaltopay = document.getElementById("total-to-pay");
     
      calculatetip.addEventListener("click", function(){
-        checkamount = parseFloat(checkamount.value),
-        tippercentage = parseFloat(tippercentage.value)/100,
-        calculatetip = checkamount * tippercentage,
-        totaltopay = checkamount + calculatetip;
+        var checkamountText = parseFloat(checkamount.value),
+        tippercentageText = parseFloat(tippercentage.value)/100,
+        calculatetipText = checkamountText * tippercentageText,
+        totaltopayText = checkamountText + calculatetipText;
 
-        totaltopay.innerHTML = "<strong>Check Amount: </strong> $" + checkamount + "<br>" +
-                "<strong>Tip Percentage:</strong> $" + tippercentage * 100+ "%<br>" +
-                "<strong>Calculate Tip:</strong> $" + calculatetip + "<br>" +
-                "<strong>Total to Pay:</strong> $" + totaltopay;
+        totaltopay.innerHTML = "<strong>Check Amount: </strong> $" + checkamountText+ "<br>" +
+                "<strong>Tip Percentage:</strong> " + tippercentageText * 100+ "%<br>" +
+                "<strong>Calculate Tip:</strong> $" + calculatetipText + "<br>" +
+                "<strong>Total to Pay:</strong> $" + totaltopayText;
 
 
      });
